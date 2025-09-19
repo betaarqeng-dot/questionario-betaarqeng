@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionário Inicial - Beta ArqEng</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Beta ArqEng Logo">
+</header>
+
+<form id="questionario">
+  <section>
+    <h2>Informações de Contato</h2>
+    <label>Nome completo: <input type="text" name="nome" required></label>
+    <label>Celular/WhatsApp: <input type="tel" name="celular" required></label>
+    <label>Email: <input type="email" name="email" required></label>
+    <label>Endereço da obra: <input type="text" name="endereco"></label>
+  </section>
+
+  <section>
+    <h2>Aprovação</h2>
+    <div class="inline">
+      <label><input type="radio" name="aprovacao" value="SIM"> SIM</label>
+      <label><input type="radio" name="aprovacao" value="NÃO"> NÃO</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Atendimento preferido</h2>
+    <div class="inline">
+      <label><input type="radio" name="atendimento" value="Presencial"> Presencial</label>
+      <label><input type="radio" name="atendimento" value="Online"> Online</label>
+      <label><input type="radio" name="atendimento" value="WhatsApp"> WhatsApp</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dados do terreno</h2>
+    <label>Largura (frente): <input type="text" name="largura"></label>
+    <label>Comprimento: <input type="text" name="comprimento"></label>
+    <label>Área total (m²): <input type="text" name="area"></label>
+  </section>
+
+  <section>
+    <h2>Documentos disponíveis</h2>
+    <div class="inline">
+      <label><input type="checkbox" name="documentos" value="Registro"> Registro/Escritura</label>
+      <label><input type="checkbox" name="documentos" value="Topografia"> Levantamento Topográfico</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Característica do terreno</h2>
+    <div class="inline">
+      <label><input type="radio" name="terreno" value="Plano"> Plano</label>
+      <label><input type="radio" name="terreno" value="Aclive"> Aclive</label>
+      <label><input type="radio" name="terreno" value="Declive"> Declive</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Tipo de construção</h2>
+    <div class="inline">
+      <label><input type="radio" name="tipoConstrucao" value="Casa térrea"> Casa térrea</label>
+      <label><input type="radio" name="tipoConstrucao" value="Sobrado"> Sobrado</label>
+      <label><input type="radio" name="tipoConstrucao" value="Mezanino"> Mezanino</label>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ambientes desejados</h2>
+    <label>Garagem: <input type="number" name="garagem"></label>
+    <textarea name="obsGaragem" rows="2" class="obs" placeholder="Observações para a garagem..."></textarea>
+
+    <label>Sala de Estar: <input type="number" name="salaEstar"></label>
+    <textarea name="obsSalaEstar" rows="2" class="obs" placeholder="Observações para sala de estar..."></textarea>
+
+    <label>Cozinha: <input type="number" name="cozinha"></label>
+    <textarea name="obsCozinha" rows="2" class="obs" placeholder="Observações para cozinha..."></textarea>
+
+    <label>Dormitórios: <input type="number" name="dormitorios"></label>
+    <textarea name="obsDormitorios" rows="2" class="obs" placeholder="Observações para dormitórios..."></textarea>
+
+    <label>Suítes: <input type="number" name="suites"></label>
+    <textarea name="obsSuites" rows="2" class="obs" placeholder="Observações para suítes..."></textarea>
+
+    <label>Banheiros: <input type="number" name="banheiros"></label>
+    <textarea name="obsBanheiros" rows="2" class="obs" placeholder="Observações para banheiros..."></textarea>
+
+    <label>Lavanderia: <input type="number" name="lavanderia"></label>
+    <textarea name="obsLavanderia" rows="2" class="obs" placeholder="Observações para lavanderia..."></textarea>
+
+    <label>Home Theater: <input type="number" name="homeTheater"></label>
+    <textarea name="obsHomeTheater" rows="2" class="obs" placeholder="Observações para home theater..."></textarea>
+
+    <label>Piscina: <input type="number" name="piscina"></label>
+    <textarea name="obsPiscina" rows="2" class="obs" placeholder="Observações para piscina..."></textarea>
+
+    <label>Churrasqueira: <input type="number" name="churrasqueira"></label>
+    <textarea name="obsChurrasqueira" rows="2" class="obs" placeholder="Observações para churrasqueira..."></textarea>
+
+    <label>Outros: <input type="text" name="outros"></label>
+    <textarea name="obsOutros" rows="2" class="obs" placeholder="Observações adicionais..."></textarea>
+  </section>
+
+  <section>
+    <h2>Estimativa de área de construção</h2>
+    <input type="text" name="areaEstimativa">
+  </section>
+
+  <section>
+    <h2>Observações gerais</h2>
+    <textarea name="observacoesGerais" rows="5"></textarea>
+  </section>
+
+  <button type="submit">Enviar Questionário</button>
+</form>
+
+</body>
+</html>
